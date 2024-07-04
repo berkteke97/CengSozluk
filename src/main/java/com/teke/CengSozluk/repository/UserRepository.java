@@ -1,8 +1,11 @@
 package com.teke.CengSozluk.repository;
 
 import com.teke.CengSozluk.model.User;
+import org.springframework.data.repository.CrudRepository;
 
-public interface UserRepository {
+import java.util.UUID;
+
+public interface UserRepository extends CrudRepository<User, UUID> {
 
     User findByUsername(String username);
 
