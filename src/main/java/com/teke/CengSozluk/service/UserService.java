@@ -6,6 +6,8 @@ import com.teke.CengSozluk.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -31,7 +33,7 @@ public class UserService {
         newUser.setCity(userDTO.getCity());
         newUser.setAgreement(userDTO.getAgreement());
         newUser.setUserRole(userDTO.getUserRole());
-        //newUser.setCreated_at(userDTO.getCreated_at());
+        newUser.setCreatedAt(LocalDateTime.now());
 
         return userRepository.save(newUser);
     }

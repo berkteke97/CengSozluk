@@ -1,4 +1,5 @@
 package com.teke.CengSozluk.model;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -6,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Data;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @JsonPropertyOrder({
@@ -34,5 +36,5 @@ public class User {
     private String city;
     private Boolean agreement;
     private String userRole;
-    private Timestamp created_at;
+    private LocalDateTime createdAt;
 }
