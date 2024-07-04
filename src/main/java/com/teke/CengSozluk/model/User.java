@@ -33,6 +33,6 @@ public class User {
     private String email;
     private String city;
     private Boolean agreement;
-    private String user_role;
+    private String userRole;
     private Timestamp created_at;
 }
