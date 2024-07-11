@@ -10,5 +10,5 @@ import java.util.UUID;
 
 public interface TopicRepository extends CrudRepository<Topic, UUID> {
 
-    Topic findById(UUID id);
+    Topic findByID(UUID id);
 }

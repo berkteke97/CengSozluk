@@ -13,10 +13,9 @@ import java.util.UUID;
         "created_at",
         "created_by",
 })
+
 @Data
 @Entity
-
-
 public class Topic {
     @Id
     private UUID id;

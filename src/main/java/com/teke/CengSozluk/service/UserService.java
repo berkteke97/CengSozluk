@@ -17,7 +17,6 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
-
     public User addUser(UserDTO userDTO){
         User existUser = userRepository.findByUsername(userDTO.getUsername());
         if (Objects.nonNull(existUser)){
