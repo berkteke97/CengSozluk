@@ -20,6 +20,7 @@ import java.util.UUID;
         "agreement",
         "activeOrder"
 })
+
 @Data
 @Entity
 public class User {
