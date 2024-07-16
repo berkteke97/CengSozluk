@@ -34,6 +34,7 @@ public class UserService {
         newUser.setUserRole(userDTO.getUserRole());
         newUser.setCreatedAt(LocalDateTime.now());
 
-        return userRepository.save(newUser);
+        User newuser1 = userRepository.save(newUser);
+        return newUser;
     }
 }
