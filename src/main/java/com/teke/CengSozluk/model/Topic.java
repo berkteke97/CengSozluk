@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -16,6 +17,8 @@ import java.util.UUID;
 
 @Data
 @Entity
+@Table(name = "topic", schema = "public")
+
 public class Topic {
     @Id
     private UUID id;

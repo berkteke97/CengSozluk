@@ -1,6 +1,7 @@
 package com.teke.CengSozluk.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Data;
@@ -23,6 +24,8 @@ import java.util.UUID;
 
 @Data
 @Entity
+@Table(name = "user", schema = "public")
+
 public class User {
 
     @Id

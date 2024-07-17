@@ -17,7 +17,7 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
-    public User addUser(UserDTO userDTO){
+    public User addUser(UserDTO userDTO) throws Exception{
         User existUser = userRepository.findByUsername(userDTO.getUsername());
         if (Objects.nonNull(existUser)){
             throw new RuntimeException("User already exist");

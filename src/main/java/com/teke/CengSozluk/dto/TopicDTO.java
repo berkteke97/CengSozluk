@@ -8,6 +8,6 @@ import java.util.UUID;
 public class TopicDTO {
     private UUID id;
     private String title;
-    private LocalDateTime created_at;
-    private UUID created_by;
+    //private LocalDateTime created_at;
+    //private UUID created_by; bunu sistemden çekicez
 }
