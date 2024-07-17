@@ -18,7 +18,6 @@ import java.util.UUID;
 public class TopicService {
 
     @Autowired
-    UserRepository userRepository; //??
     TopicRepository topicRepository;
 
     public Topic addTopic(TopicDTO topicDTO) {
@@ -30,7 +29,7 @@ public class TopicService {
         newTopic.setId(UUID.randomUUID());
         newTopic.setTitle(topicDTO.getTitle());
         newTopic.setCreated_at(LocalDateTime.now());
-        newTopic.setCreated_by(UUID.randomUUID()); // This line will be changed with the related user's ID when log in operation is completed.
+        newTopic.setCreated_by(UUID.fromString("5b7b56af-9590-4796-8e7f-2719ade12159")); // This line will be changed with the related user's ID when log in operation is completed.
 
         return topicRepository.save(newTopic);
     }

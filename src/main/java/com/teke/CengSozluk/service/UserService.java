@@ -17,7 +17,7 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
-    public User addUser(UserDTO userDTO){
+    public User addUser(UserDTO userDTO) throws Exception{
         User existUser = userRepository.findByUsername(userDTO.getUsername());
         if (Objects.nonNull(existUser)){
             throw new RuntimeException("User already exist");
@@ -34,6 +34,7 @@ public class UserService {
         newUser.setUserRole(userDTO.getUserRole());
         newUser.setCreatedAt(LocalDateTime.now());
 
-        return userRepository.save(newUser);
+        User newuser1 = userRepository.save(newUser);
+        return newUser;
     }
 }
